@@ -1,0 +1,58 @@
+/* FONT IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* TAILWIND IMPORT */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* GLOBAL CSS */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #F8FAFF;
+}
+
+/* FONT CLASSES */
+.montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+/* CUSTOM STYLES */
+.signup-clip-left {
+  clip-path: polygon(100% 0, 80% 100%, 0 100%, 0 0)
+}
+
+.placeholder-font::placeholder {
+  font-weight: 700;
+  font-size: 1.5rem;
+  align-content: center;
+}
+
+.icon-svg-color {
+  fill: #3a3abc;
+}
+
+.body-width {
+  margin-left: 14rem;
+  width: calc(100% - 14rem);
+}
+
+.active {
+  color: #4F46E5;
+}
+
+@media screen and (max-width: 600px) {
+  .body-width{
+    margin-left: 0;
+  width: 100vw;
+  }
+
+  .signup-clip-left {
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0)
+  }
+}
