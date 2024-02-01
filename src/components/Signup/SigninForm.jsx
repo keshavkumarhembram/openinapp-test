@@ -1,9 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import { Link } from "react-router-dom";
 import ActionButton from "../Utils/Buttons/ActionButton";
 
 function SigninForm() {
+  const navigate = useNavigate();
+  const onSubmitHandler = (e) => {
+    e.preventDefault();
+    navigate('/user');
+  };
   return (
     <form className=" ml-auto mr-auto w-[90vw] sm:w-[422px] p-5 bg-white flex flex-col items-center">
       <label htmlFor="email" className=" self-baseline">
@@ -32,7 +38,7 @@ function SigninForm() {
         Forgot password?
       </Link>
 
-      <ActionButton actionName='Sign In'/>
+      <ActionButton actionFunction={onSubmitHandler} actionName='Sign In'/>
     </form>
   );
 }

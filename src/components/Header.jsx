@@ -17,8 +17,8 @@ function Header({heading}) {
   return (
     <header className='flex justify-between relative mx-4 sm:mx-20 sm:bg-inherit'>
       <h1 className='text-2xl font-semibold hidden sm:block'>{heading}</h1>
-      <button className={`${navBarActive ? 'hidden': 'block'}`} onClick={onClickHandler}> <img src={HamburgerIcon} /></button>
-      <div className='absolute flex items-center gap-2 left-6 top-[-.7rem]'>
+      <button className={`sm:hidden ${navBarActive ? 'hidden': 'block'}`} onClick={onClickHandler}> <img src={HamburgerIcon} /></button>
+      <div className='absolute flex items-center sm:hidden gap-2 left-6 top-[-.7rem]'>
         <img className='h-8 w-8' src={Logo} />
         <p className='text-2xl text-indigo-600 font-semibold sm:hidden'>Base</p>
       </div>

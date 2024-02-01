@@ -23,7 +23,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/' element={<Home />} />
         <Route path='/signup' element={<SigninPage/>} />
         <Route path='/user' element={<App />} >
-          <Route path='dashboard' element={<DashBoardPage />} />
+          <Route index={true} element={<DashBoardPage />} />
           <Route path='upload' element={<UploadPage />} />
           <Route path='*' element={<UnhandledRoutePage />} />
         </Route>
